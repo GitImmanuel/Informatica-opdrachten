@@ -119,7 +119,7 @@ if 0.2 < alcoholpromillage:
 time.sleep(4)
 
 
-for nieuw in range(3, 51):
+for nieuw in range(1, 51):
     nieuweuren = nieuw - 0.5
     abaaa = nieuweuren * gewichtreken
     if geslacht == "man,":
