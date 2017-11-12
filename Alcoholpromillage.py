@@ -125,17 +125,20 @@ for nieuw in range(1, 51):
     if geslacht == "man,":
         probeer = alcoholman - abaaa
         if probeer == 0.2 or probeer < 0.2:
-            print("Je mag na", nieuw, "uur weer rijden!")
+            haha = nieuw - uren
+            print("Je mag na", haha, "uur weer rijden!")
             break
     elif geslacht == "vrouw,":
         probeer = alcoholvrouw - abaaa
         if probeer == 0.2 or probeer < 0.2:
-            print("Je mag na", nieuw, "uur weer rijden!")
+            haha = nieuw - uren
+            print("Je mag na", haha, "uur weer rijden!")
             break
     else:
         probeer = alcoholoverige - abaaa
         if probeer == 0.2 or probeer < 0.2:
-            print("Je mag na", nieuw, "uur weer rijden!")
+            haha = nieuw - uren
+            print("Je mag na", haha, "uur weer rijden!")
             break
 
 
