@@ -105,7 +105,7 @@ print("Je mag niet rijden vanaf een alcoholpromillage van 0,2. Uw alcoholpromill
 time.sleep(4)
 print(' ')
 
-print('Er wordt gezegt dat je na 3 biertjes absoluut niet meer achter het stuur mag, dit is meestal waar maar het ligt aan uw gewicht en hoelang het geleden is.')
+print('Er wordt gezegd dat je na 3 biertjes absoluut niet meer achter het stuur mag, dit is meestal waar maar het ligt aan uw gewicht en hoelang het geleden is.')
 time.sleep(6)
 print(' ')
 
@@ -122,10 +122,23 @@ time.sleep(4)
 for nieuw in range(3, 51):
     nieuweuren = nieuw - 0.5
     abaaa = nieuweuren * gewichtreken
-    probeer = alcoholman - abaaa
-    if probeer == 0.2 or probeer < 0.2:
-        print("Je mag na", nieuw, "uur weer rijden!")
-        break
+    if geslacht == "man,":
+        probeer = alcoholman - abaaa
+        if probeer == 0.2 or probeer < 0.2:
+            print("Je mag na", nieuw, "uur weer rijden!")
+            break
+    elif geslacht == "vrouw,":
+        probeer = alcoholvrouw - abaaa
+        if probeer == 0.2 or probeer < 0.2:
+            print("Je mag na", nieuw, "uur weer rijden!")
+            break
+    else:
+        probeer = alcoholoverige - abaaa
+        if probeer == 0.2 or probeer < 0.2:
+            print("Je mag na", nieuw, "uur weer rijden!")
+            break
+
+
 
 print('')
 
