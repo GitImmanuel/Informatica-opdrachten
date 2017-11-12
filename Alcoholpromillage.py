@@ -119,9 +119,15 @@ if 0.2 < alcoholpromillage:
 time.sleep(4)
 
 
+for nieuw in range(3, 51):
+    nieuweuren = nieuw - 0.5
+    abaaa = nieuweuren * gewichtreken
+    probeer = alcoholman - abaaa
+    if probeer == 0.2 or probeer < 0.2:
+        print("Je mag na", nieuw, "uur weer rijden!")
+        break
 
-print('Jantje is 70 kg, een man en heeft 20 glazen opgedronken. Hij mag na 27 uur weer rijden.')
-print(' ')
+print('')
 
 
 input('Exit the terminal when done')
