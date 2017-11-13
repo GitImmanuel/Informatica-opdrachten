@@ -3,17 +3,48 @@ import time
 import sys
 
 #informatie ophalen
-gewicht = int(input('Vul je gewicht in in kg: '))
-print(' ')
+def informatieophalen():
+    global geslacht, gewicht, uren, glazen
+    def gewichtfunctie():
+        try:
+            global gewicht
+            gewicht = int(input('Vul je gewicht in in kg: '))
+            print('')
+        except ValueError:
+            print(' ')
+            print('Vul alstublieft een getal in.')
+            gewichtfunctie()
 
-glazen = int(input('Vul nu in hoeveel glazen je hebt gedronken: '))
-print(' ')
+    gewichtfunctie()
 
-geslacht = input('Vul je geslacht in (man, vrouw of overige): ')
-print(' ')
+    def glazenfunctie():
+        try:
+            global glazen
+            glazen = int(input('Vul nu in hoeveel glazen je hebt gedronken: '))
+            print('')
+        except ValueError:
+            print(' ')
+            print('Vul alstublieft een getal in.')
+            glazenfunctie()
 
-uren = int(input('Vertel ons hoeveel uur het geleden is dat je je laatste glas hebt gedronken: '))
-print(' ')
+    glazenfunctie()
+
+    geslacht = input('Vul je geslacht in (man, vrouw of overige): ')
+    print(' ')
+
+    def urenfunctie():
+        try:
+            global uren
+            uren = int(input('Vertel ons hoeveel uur het geleden is dat je je laatste glas hebt gedronken: '))
+            print('')
+        except ValueError:
+            print(' ')
+            print('Vul alstublieft een getal in.')
+            urenfunctie()
+
+    urenfunctie()
+
+informatieophalen()
 
 #rekenen
 alcoholprom = int(glazen) * 10
@@ -97,10 +128,11 @@ print(' ')
 
 #OPDRACHT 2-------------------------------------------------------------
 
-if -10 < alcoholpromillage < 0.2:
+if alcoholpromillage < 0.2:
     hoag = 'goed om te rijden.'
-elif  0.2 < alcoholpromillage:
+elif 0.2 < alcoholpromillage:
     hoag = 'te hoog om te rijden! Ga niet de weg op.'
+
 print("Je mag niet rijden vanaf een alcoholpromillage van 0,2. Uw alcoholpromillage is", hoag, 'Let altijd goed op terwijl je rijdt, ook nuchter!')
 time.sleep(4)
 print(' ')
@@ -113,35 +145,30 @@ print('!!!DISCLAIMER!!! GA NOOIT MET ALCOHOL OP ACHTER HET STUUR!')
 print(' ')
 time.sleep(3)
 
-if 0.2 < alcoholpromillage:
-    print('Uw promillage is te hoog om te rijden, wacht nog even met rijden.')
-    print(' ')
-time.sleep(4)
+def wachten():
+    for nieuw in range(1, 250):
+        nieuweuren = nieuw - 0.5
+        abaaa = nieuweuren * gewichtreken
+        if geslacht == "man,":
+            probeer = alcoholman - abaaa
+            if probeer == 0.2 or probeer < 0.2:
+                haha = nieuw - uren
+                print("Je mag na", haha, "uur weer rijden!")
+                break
+        elif geslacht == "vrouw,":
+            probeer = alcoholvrouw - abaaa
+            if probeer == 0.2 or probeer < 0.2:
+                haha = nieuw - uren
+                print("Je mag na", haha, "uur weer rijden!")
+                break
+        else:
+            probeer = alcoholoverige - abaaa
+            if probeer == 0.2 or probeer < 0.2:
+                haha = nieuw - uren
+                print("Je mag na", haha, "uur weer rijden!")
+                break
 
-
-for nieuw in range(1, 51):
-    nieuweuren = nieuw - 0.5
-    abaaa = nieuweuren * gewichtreken
-    if geslacht == "man,":
-        probeer = alcoholman - abaaa
-        if probeer == 0.2 or probeer < 0.2:
-            haha = nieuw - uren
-            print("Je mag na", haha, "uur weer rijden!")
-            break
-    elif geslacht == "vrouw,":
-        probeer = alcoholvrouw - abaaa
-        if probeer == 0.2 or probeer < 0.2:
-            haha = nieuw - uren
-            print("Je mag na", haha, "uur weer rijden!")
-            break
-    else:
-        probeer = alcoholoverige - abaaa
-        if probeer == 0.2 or probeer < 0.2:
-            haha = nieuw - uren
-            print("Je mag na", haha, "uur weer rijden!")
-            break
-
-
+wachten()
 
 print('')
 
