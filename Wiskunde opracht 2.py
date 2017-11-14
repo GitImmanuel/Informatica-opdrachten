@@ -8,4 +8,4 @@ def ja():
 
 ja()
 
-input("Press 'Enter' to exit terminal.")
+input("Exit terminal when done.")
