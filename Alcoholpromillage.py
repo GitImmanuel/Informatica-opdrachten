@@ -2,6 +2,8 @@ import math
 import time
 import sys
 
+print('Welkom!')
+
 #informatie ophalen
 def informatieophalen():
     global geslacht, gewicht, uren, glazen
