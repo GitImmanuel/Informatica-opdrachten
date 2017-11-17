@@ -2,6 +2,16 @@ import math
 import time
 import sys
 
+def neeeee():
+    from datetime import datetime
+    from datetime import time
+
+    current = datetime.now()
+    print('The current date and time is:', current)
+    print('')
+
+neeeee()
+
 #Welkom
 print('Welkom!')
 print('')
