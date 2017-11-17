@@ -7,7 +7,7 @@ def neeeee():
     from datetime import time
 
     current = datetime.now()
-    print('The current date and time is:', current)
+    print('De tijd en datum van vandaag zijn:', current)
     print('')
 
 neeeee()
