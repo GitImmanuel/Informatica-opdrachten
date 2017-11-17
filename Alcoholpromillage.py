@@ -2,7 +2,18 @@ import math
 import time
 import sys
 
+def neeeee():
+    from datetime import datetime
+    from datetime import time
+
+    current = datetime.now()
+    print('De tijd en datum van vandaag zijn :', current)
+    print('')
+
+neeeee()
+
 print('Welkom!')
+print('')
 
 #informatie ophalen
 def informatieophalen():
